@@ -29,7 +29,7 @@ No. But our north star is to get there.
 ### External Libraries
 
 -   `forge-std`
--   `Solday`
+-   `Solady`
 
 ### Interfaces
 
@@ -41,7 +41,7 @@ No. But our north star is to get there.
 ### Libraries
 
 -   `WadScale.sol` - Handles scaling to and from WAD.
--   `TickBitmap.sol` - Handles storing and traversing of ticks in a bitmap. Based on `LibBit` from Solday.
+-   `TickBitmap.sol` - Handles storing and traversing of ticks in a bitmap. Based on `LibBit` from Solady.
 -   `TickNav.sol` - Exposes higher level functions to traverse through ticks.
 -   `OrbitalMath.sol` - Core math: closed-form segment quotes, invariant updates, and tick guards.
 
@@ -53,9 +53,11 @@ No. But our north star is to get there.
 ## Quick Start
 
 ### Prerequisites
-- [Foundry](https://getfoundry.sh/) installed
+
+-   [Foundry](https://getfoundry.sh/) installed
 
 ### Installation
+
 ```bash
 git clone https://github.com/aadeexyz/orbital.git
 cd orbital
@@ -63,26 +65,31 @@ forge install
 ```
 
 ### Build & Test
+
 ```bash
 forge test
 ```
 
 ## Tests
-> [!WARNING] 
-> Tests are AI generated and may have errors. Pwease hewp me with the tests UwU.
 
-| File | Tests | Passing |
-| - | - | -|
-| WadScale.t.sol | 9 | ✅ |
-| TickBitmap.t.sol | 12 | ✅ |
-| TickNav.t.sol | 7 | ✅ |
-| OrbitalMath.t.sol | 14 | ✅ |
-| Pool.t.sol | 17 | ✅ |
+Deterministic vectors are included (segment quotes, boundary crossings, tick helpers).
+Property tests & fuzzing are **WIP**.
+
+> [!NOTE]
+> Some tests started out as AI-generated scaffolds and are being reviewed and extended with invariant checks.
+
+| File              | Tests | Passing |
+| ----------------- | ----- | ------- |
+| WadScale.t.sol    | 9     | ✅      |
+| TickBitmap.t.sol  | 12    | ✅      |
+| TickNav.t.sol     | 7     | ✅      |
+| OrbitalMath.t.sol | 14    | ✅      |
+| Pool.t.sol        | 17    | ✅      |
 
 ## Contributing
-Please contribute cause I can't build it alone TwT
 
 ### Development Workflow
+
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
@@ -93,12 +100,14 @@ Please contribute cause I can't build it alone TwT
 8. Make sure the pull request details what you've added
 
 ### Code Standards
-- Follow Solidity style guide
-- Please don't dump everything in the same file
+
+-   Follow Solidity style guide
+-   Please don't dump everything in the same file
 
 ## Security
+
 This software is experimental and unaudited, and is provided on an 'as is' and 'as available' basis. We do not give any warranties and will not be liable for any loss incurred through any use of this codebase.
 
-
 ## License
+
 This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details.
